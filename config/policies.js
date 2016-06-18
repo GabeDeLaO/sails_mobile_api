@@ -26,12 +26,15 @@ module.exports.policies = {
   *                                                                          *
   ***************************************************************************/
 
-  '*': ['passport', 'sessionAuth'],
+  //'*': ['passport', 'sessionAuth'],
   'auth': {
     '*': ['passport']
   },
   'UserController' : {
     '*': ['passport',/*'sessionAuth',*/'bearerAuth']
+  },
+  'NotificationController' : {
+    '*': ['passport', 'bearerAuth']
   }
 
   /***************************************************************************
